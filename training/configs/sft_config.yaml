@@ -1,0 +1,36 @@
+#----------------Model-----------
+
+base_model:"meta-llama/Meta-Llama-3-8B-Instruct"
+
+
+##---------------Data----------------
+
+train_jsonl: "data/processed/pubmedqa_full/sft_full_train.jsonl"
+valid_jsonl: "data/processed/pubmedqa_full/sft_full_valid.jsonl"
+
+
+#----------------Train---------
+
+num_train_epochs: 1
+per_device_batch_size: 2
+grad_accum_steps: 8
+learning_rate: 2.0e-4
+weight_decay: 0.01
+warmup_ratio: 0.03
+clip_grad_norm: 1.0
+log_every: 20
+eval_every_steps: 1000
+save_every_steps: 1000
+bf16: true
+seed: 42
+
+#-------------------Output------------
+output_dir: "experiments/sft_model"
+
+#---------------LoRA (config)-------------
+
+enable_lora: true
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]

@@ -1,0 +1,16 @@
+#Paths
+raw_dir: "data/raw/pubmedqa_full"
+processed_dir: "data/processed/pubmedqa_full"
+sft_output_file: "data/processed/sft_full.jsonl"
+
+# Split ratios (train/valid/test)
+train_split: 0.9
+valid_split: 0.05
+test_split: 0.05
+
+# Cleaning thresholds
+min_context_words: 10
+max_context_words: 500
+
+# Seed for reproducibility
+seed: 42

@@ -1,0 +1,29 @@
+# Core
+torch>=2.3.0
+transformers>=4.44.0
+datasets>=2.20.0
+accelerate>=0.33.0
+peft>=0.11.0
+trl>=0.10.0
+
+# Retrieval / NLP utils
+faiss-cpu
+sentence-transformers>=3.0.0
+nltk
+scikit-learn
+tqdm
+numpy
+pandas
+pyyaml
+evaluate
+jinja2
+
+# Web / dashboard
+fastapi
+uvicorn
+streamlit
+gradio
+
+# Misc
+psutil
+rich

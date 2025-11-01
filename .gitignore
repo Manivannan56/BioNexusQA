@@ -1,0 +1,89 @@
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.code-workspace
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Virtual envs
+.venv/
+venv/
+.env
+.env.*/
+pip-wheel-metadata/
+
+# Logs / runs
+logs/
+*.log
+wandb/
+lightning_logs/
+mlruns/
+
+# HF / caches
+.hf/
+.huggingface/
+huggingface/
+cache/
+HF_HOME/
+# if you use a dedicated cache dir:
+mnt/hf_cache/
+.mim/
+
+# Big artifacts / checkpoints
+*.pt
+*.bin
+*.ckpt
+*.safetensors
+*.onnx
+*.npz
+*.tar
+*.tar.gz
+*.zip
+
+# Train outputs (keep directory tracked with .gitkeep)
+training/experiments/
+!training/experiments/.gitkeep
+
+# Data (don’t version raw/processed)
+data/raw/
+data/processed/
+!data/raw/README.md
+!data/processed/README.md
+# allow tiny samples for tests
+!data/processed/**/samples/**
+!data/processed/**/tiny/**
+!data/processed/**/*.sample.json
+!data/processed/**/*.sample.jsonl
+
+# Secrets / creds
+*.pem
+*.key
+*.crt
+*.pub
+*.json
+*.creds
+*.secret
+**/secrets/**
+**/.secrets/**
+**/.credentials/**
+**/credentials/**
+
+# Keep configs/scripts tracked
+!training/**/config*.yaml
+!training/**/README.md
+!training/**/launch*.sh
+!training/**/ddp_*.py
+!training/**/train_*.py

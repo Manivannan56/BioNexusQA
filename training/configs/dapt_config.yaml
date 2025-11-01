@@ -1,0 +1,36 @@
+data:
+   train_json_path: ".../../data/processed/pubmedqa_full/dapt_200k.json"
+   block_size: 4096
+   min_chars: 10
+
+model:
+   name_or_path: "meta-llama/Meta-Llama-3-8B"
+   tokenizer_name_or_path: "meta-llama/Meta-Llama-3-8B"
+
+optim:
+   epoch: 2
+   per_device_batch_size: 1
+   grad_accum: 16
+   lr: 2.0e-5
+   weight_decay: 0.01
+   warmup_ratio: 0.05
+   max_grad_norm: 1.0
+
+
+precision:
+   
+   fp16: false
+   bf16: true 
+
+runtime:
+    output_dir: "../training/experiments/llama3_8b_ddp_dapt"
+    num_workers: 4
+    seed: 42
+    resume: false
+
+logging:
+   log_every: 50
+   save_every: 1000
+
+   
+  

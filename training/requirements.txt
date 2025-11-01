@@ -1,0 +1,53 @@
+# ===========================
+# Core Frameworks
+# ===========================
+torch>=2.2.0
+torchvision
+torchaudio
+
+# ===========================
+# Hugging Face ecosystem
+# ===========================
+transformers>=4.43.0
+datasets>=2.18.0
+tokenizers>=0.15.0
+peft>=0.10.0
+trl>=0.9.6
+
+# ===========================
+# Distributed Training
+# ===========================
+#deepspeed==0.14.4        ## Needed only in GCP
+accelerate>=0.27.2
+
+# ===========================
+# Utilities
+# ===========================
+tqdm
+pyyaml
+numpy
+pandas
+scikit-learn
+matplotlib
+evaluate
+sentencepiece
+#bitsandbytes>=0.43.0          ## Needed only in GCP
+
+
+# ===========================
+# Logging / Tracking
+# ===========================
+wandb>=0.17.0
+rich
+loguru
+
+# ===========================
+# Optional – if you use Gradio/Streamlit for demos
+# ===========================
+gradio
+streamlit
+
+# ===========================
+# For model saving/loading on GCP / cloud
+# ===========================
+google-cloud-storage
