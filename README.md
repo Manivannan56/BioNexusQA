@@ -1,7 +1,7 @@
 # BIONEXUS-QA — Domain-Adaptive Pretraining (DAPT) + SFT Pipeline
 
 > Production-oriented repo for biomedical instruction tuning.  
-> We first run **DAPT** (unsupervised, causal LM) on in-domain PubMedQA-style text, then perform **SFT** on curated instruction data.
+> We first run **DAPT** (unsupervised) on in-domain PubMedQA-style text, then perform **SFT** on curated instruction data.
 
 ---
 
